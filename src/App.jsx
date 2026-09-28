@@ -67,7 +67,7 @@ function App() {
               Emiliano <em>Molina Valdés</em>
             </h1>
             <p className="hero-subtitle reveal">
-              Especializado en el desarrollo integral de soluciones tecnológicas: desde el diseño mecánico 3D y electrónica de potencia, hasta la programación de microcontroladores y creación de interfaces web.
+              Especializado en el desarrollo integral de soluciones tecnológicas: desde el diseño mecánico 3D y electrónica de potencia, hasta la programación de microcontroladores y desarrollo web.
             </p>
             <div className="hero-actions reveal">
               <a href="#unit" className="btn btn-primary">Ver trayectoria</a>
