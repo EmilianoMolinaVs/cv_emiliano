@@ -39,9 +39,9 @@ function App() {
       <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
         <nav className="nav container">
           <a href="#home" className="nav-brand">E<span className="accent">.</span>Molina</a>
-          
-          <button 
-            className="nav-toggle" 
+
+          <button
+            className="nav-toggle"
             onClick={() => setIsNavOpen(!isNavOpen)}
             aria-expanded={isNavOpen}
           >
@@ -67,7 +67,7 @@ function App() {
               Emiliano <em>Molina Valdés</em>
             </h1>
             <p className="hero-subtitle reveal">
-              Especializado en el desarrollo integral de soluciones tecnológicas: desde el diseño mecánico 3D y electrónica de potencia, hasta la programación de microcontroladores y desarrollo web.
+              Ingeniero en Mecatrónica por el Instituto Politécnico Nacional, especializado en el desarrollo integral de soluciones tecnológicas. Mi experiencia abarca desde el diseño y modelado 3D, hasta la programación y validación de prototipos funcionales. Actualmente, me desenvuelvo en la integración completa de sistemas, desarrollando hardware especializado, firmware para sistemas embebidos y software frontend y backend para su control y automatización.
             </p>
             <div className="hero-actions reveal">
               <a href="#unit" className="btn btn-primary">Ver trayectoria</a>
@@ -86,19 +86,18 @@ function App() {
               <span className="section-number">01</span>
               <h2 className="section-title">Trabajo Actual</h2>
             </div>
-            
+
             <div className="timeline-item reveal">
               <div className="timeline-period">Sept 2025 — Presente</div>
               <div className="timeline-body">
-                <h3 className="timeline-role">Ingeniero de Proyectos / Test Engineering</h3>
+                <h3 className="timeline-role">Ingeniero de Pruebas/ Test Engineering</h3>
                 <p className="timeline-company">UNIT Electronics</p>
                 <div className="timeline-description">
                   <ul className="project-list">
-                    <li>Desarrollo de scripts de automatización en Bash/Python y firmware para el TestBench UE0022 MCU_DualOne (programación de ESP32 y RP2040).</li>
-                    <li>Diseño de circuitos impresos (PCBs) y ruteo 3D en Autodesk Fusion 360, destacando sistemas de alarma sísmica con ESP32-S3 y DAC PCM5102.</li>
-                    <li>Programación de agentes locales en Python para servidores LockNode, redactando documentación técnica en Confluence.</li>
-                    <li>Desarrollo de interfaces (Frontend) con React, Tailwind CSS y TypeScript para aplicaciones internas.</li>
-                    <li>Escritura de firmware para microcontroladores arquitecturas ARM (PY32, RP2350) y AVR (ATmega328P, ATtiny85).</li>
+                    <li>Desarrollo de firmware en C/C++/MicroPython (arquitecturas ARM Cortex, ESP32 y AVR) orientado a la automatización de pruebas y validación de microcontroladores en banco de pruebas.</li>
+                    <li>Diseño e implementación de hardware de control y electrónica de potencia a medida para optimizar la automatización en las estaciones de la línea de producción.</li>
+                    <li>Desarrollo de interfaces web (Frontend) intuitivas utilizando React, TypeScript y Tailwind CSS, para la correcta integración de los operadores de la línea con los sistemas de validación de manera eficiente.</li>
+                    <li>Integración y gestión de sistemas Backend, garantizando el registro preciso y la trazabilidad continua de los lotes de productos fabricados.</li>
                   </ul>
                 </div>
               </div>
@@ -113,25 +112,35 @@ function App() {
               <span className="section-number">02</span>
               <h2 className="section-title">Tesis & Manufactura</h2>
             </div>
-            
+
             <ol className="timeline">
               <li className="timeline-item reveal">
                 <div className="timeline-period">Ene 2024 — Jul 2025</div>
                 <div className="timeline-body">
                   <h3 className="timeline-role">Desarrollo de Prótesis Transtibial</h3>
                   <p className="timeline-company">UPIITA - CIDETEC - IPN</p>
+
+                  {/* Imagen movida dentro del cuerpo del proyecto y con clase específica */}
+                  <div className="thesis-image-container">
+                    <img
+                      src={`${import.meta.env.BASE_URL}img/Protesis_Final.png`}
+                      alt="Modelo final de prótesis transtibial"
+                      className="thesis-image"
+                    />
+                  </div>
+
                   <div className="timeline-description">
                     <ul className="project-list">
-                      <li>Diseñé el modelo mecánico 3D de la prótesis en CAD, validando geometría y movimiento para evitar interferencias y asegurar un desplazamiento correcto.[cite: 4]</li>
-                      <li>Realicé análisis estructurales por elementos finitos, verificando que la estructura trabajara al 18% de su capacidad máxima, con un factor de seguridad superior al requerido.[cite: 4]</li>
-                      <li>Manufacturé componentes con maquinaria CNC y convencional logrando precisión de ±0.25 mm.[cite: 4]</li>
-                      <li>Programé los sistemas de control y adquisición de datos en tiempo real, optimizando el mecanismo de marcha y reduciendo el error máximo en un 15%.[cite: 4]</li>
-                      <li>Implementé una red neuronal multicapa para el análisis de datos, mejorando la respuesta de seguimiento angular en un 85%.[cite: 4]</li>
+                      <li>Diseñé el modelo mecánico 3D de la prótesis en CAD, validando geometría y movimiento para evitar interferencias y asegurar un desplazamiento correcto.</li>
+                      <li>Realicé análisis estructurales por elementos finitos, verificando que la estructura trabajara al 18% de su capacidad máxima, con un factor de seguridad superior al requerido.</li>
+                      <li>Manufacturé componentes con maquinaria CNC y convencional logrando precisión de ±0.25 mm.</li>
+                      <li>Programé los sistemas de control y adquisición de datos en tiempo real, optimizando el mecanismo de marcha y reduciendo el error máximo en un 15%.</li>
+                      <li>Implementé una red neuronal multicapa para el análisis de datos, mejorando la respuesta de seguimiento angular en un 85%.</li>
                     </ul>
                   </div>
                 </div>
               </li>
-              
+
               <li className="timeline-item reveal">
                 <div className="timeline-period">Jun 2023 — Dic 2023</div>
                 <div className="timeline-body">
@@ -139,8 +148,8 @@ function App() {
                   <p className="timeline-company">SeTma & Com</p>
                   <div className="timeline-description">
                     <ul className="project-list">
-                      <li>Verifiqué tolerancias dimensionales con instrumentos de metrología, asegurando desviaciones menores a ±0.25 mm.[cite: 4]</li>
-                      <li>Operé torno, fresadora y troqueladora para manufacturar zapatas industriales cumpliendo estándares de calidad y plazos de fabricación.[cite: 4]</li>
+                      <li>Verifiqué tolerancias dimensionales con instrumentos de metrología, asegurando desviaciones menores a ±0.25 mm.</li>
+                      <li>Operé torno, fresadora y troqueladora para manufacturar zapatas industriales cumpliendo estándares de calidad y plazos de fabricación.</li>
                     </ul>
                   </div>
                 </div>
@@ -156,17 +165,46 @@ function App() {
               <span className="section-number">03</span>
               <h2 className="section-title">Proyectos de Investigación</h2>
             </div>
-            
+
             <div className="projects-grid">
               <article className="project-card reveal">
                 <div className="project-index">INV·01</div>
                 <h3 className="project-title">Estructuras fotovoltaicas arbóreas</h3>
+
+                {/* Contenedor de la imagen */}
+                {/* Galería de imágenes (Alineación horizontal) */}
+                <div className="images-gallery">
+                  <div className="project-image-container">
+                    <img
+                      src={`${import.meta.env.BASE_URL}img/S1.png`}
+                      alt="Estructura fotovoltaica vista 1"
+                      className="project-image"
+                    />
+                  </div>
+
+                  <div className="project-image-container">
+                    <img
+                      src={`${import.meta.env.BASE_URL}img/FF.png`}
+                      alt="Estructura fotovoltaica vista principal"
+                      className="project-image"
+                    />
+                  </div>
+
+                  <div className="project-image-container">
+                    <img
+                      src={`${import.meta.env.BASE_URL}img/A2.png`}
+                      alt="Estructura fotovoltaica vista 2"
+                      className="project-image"
+                    />
+                  </div>
+                </div>
+
                 <div className="project-description">
                   <ul className="project-list">
-                    <li>Desarrollé un algoritmo en Python para modelar y analizar estructuras fotovoltaicas con distintas configuraciones de hojas y ramas.[cite: 4]</li>
-                    <li>Identifiqué la configuración con mayor eficiencia en conversión energética.[cite: 4]</li>
-                    <li>Implementé un sistema de seguimiento solar simulado para estimar la eficiencia según fecha y ubicación.[cite: 4]</li>
-                    <li>Presenté los resultados en el Encuentro Nacional de Investigación del IPN 2023 y en SMCTSM 2023 XVI / 2024 XVII.[cite: 4]</li>
+                    <li>Desarrollo de un algoritmo en Python para modelar y analizar estructuras fotovoltaicas con distintas configuraciones de hojas y ramas.</li>
+                    <li>Identificación de la configuración con mayor eficiencia en conversión energética.</li>
+                    <li>Implementación de un sistema de seguimiento solar simulado para estimar la eficiencia según fecha y ubicación.</li>
+                    <li>Presentación de los resultados en el Encuentro Nacional de Investigación del IPN 2023 y en SMCTSM 2023 XVI / 2024 XVII.</li>
                   </ul>
                 </div>
               </article>
@@ -176,10 +214,10 @@ function App() {
                 <h3 className="project-title">Convertidor CA-CD para horno VAR</h3>
                 <div className="project-description">
                   <ul className="project-list">
-                    <li>Diseñé un sistema de control retroalimentado para un rectificador trifásico en un horno de alto vacío industrial.[cite: 4]</li>
-                    <li>Estabilicé la potencia de salida con una variación máxima de ±2%.[cite: 4]</li>
-                    <li>Reduje el tiempo de respuesta del sistema en un 15% mediante tiristores.[cite: 4]</li>
-                    <li>Mejoré la eficiencia energética del proceso en un 10%.[cite: 4]</li>
+                    <li>Diseñé un sistema de control retroalimentado para un rectificador trifásico en un horno de alto vacío industrial.</li>
+                    <li>Estabilicé la potencia de salida con una variación máxima de ±2%.</li>
+                    <li>Reduje el tiempo de respuesta del sistema en un 15% mediante tiristores.</li>
+                    <li>Mejoré la eficiencia energética del proceso en un 10%.</li>
                   </ul>
                 </div>
               </article>
@@ -199,13 +237,13 @@ function App() {
               <div className="about-text reveal">
                 <div className="education-block">
                   <h3 className="timeline-role">Ingeniería en Mecatrónica</h3>
-                  <p className="timeline-company">Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas UPIITA, IPN (Agosto 2020 – Julio 2025).[cite: 4]</p>
-                  <p className="accent-text">Promedio final: 9.57. Certificado – Mención honorífica.[cite: 4]</p>
+                  <p className="timeline-company">Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas UPIITA, IPN (Agosto 2020 – Julio 2025).</p>
+                  <p className="accent-text">Promedio final: 9.57. Certificado – Mención honorífica.</p>
                 </div>
                 <div className="education-block mt-3">
                   <h3 className="timeline-role">Técnico en Mantenimiento Industrial</h3>
-                  <p className="timeline-company">Centro de Estudios Científicos y Tecnológicos No. 7, CECyT IPN (Agosto 2017 – Julio 2020).[cite: 4]</p>
-                  <p className="accent-text">Promedio final: 9.22.[cite: 4]</p>
+                  <p className="timeline-company">Centro de Estudios Científicos y Tecnológicos No. 7, CECyT IPN (Agosto 2017 – Julio 2020).</p>
+                  <p className="accent-text">Promedio final: 9.22.</p>
                 </div>
               </div>
 
@@ -213,7 +251,7 @@ function App() {
                 <div className="skill-group">
                   <h3 className="skill-group-title">Software & Firmware</h3>
                   <ul className="skill-list">
-                    <li>C, C++, Python, MATLAB, Simulink, Wolfram Mathematica, Ensamblador.[cite: 4]</li>
+                    <li>C, C++, Python, MATLAB, Simulink, Wolfram Mathematica, Ensamblador.</li>
                     <li>React, TypeScript, Tailwind CSS, Git/GitLab</li>
                     <li>Programación de ESP32, ARM Cortex, AVR</li>
                   </ul>
@@ -221,9 +259,9 @@ function App() {
                 <div className="skill-group mt-2">
                   <h3 className="skill-group-title">Hardware & Diseño</h3>
                   <ul className="skill-list">
-                    <li>SolidWorks (diseño y análisis 3D), Autodesk AutoCAD, Fusion, Inventor, SketchUp.[cite: 4]</li>
-                    <li>Simulación con Proteus y Multisim; diseño y fabricación de PCBs en Eagle Autodesk Fusion.[cite: 4]</li>
-                    <li>Soldadura THT y SMD.[cite: 4]</li>
+                    <li>SolidWorks (diseño y análisis 3D), Autodesk AutoCAD, Fusion, Inventor, SketchUp.</li>
+                    <li>Simulación con Proteus y Multisim; diseño y fabricación de PCBs en Autodesk Fusion.</li>
+                    <li>Soldadura THT y SMD.</li>
                   </ul>
                 </div>
               </div>
@@ -232,7 +270,7 @@ function App() {
         </section>
 
       </main>
-      
+
       <footer className="site-footer">
         <div className="container footer-content">
           <p className="footer-brand">E<span className="accent">.</span>Molina</p>
