@@ -1,0 +1,24 @@
+import { useEffect } from 'react';
+
+export function useReveal() {
+  useEffect(() => {
+    const revealElements = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+
+    return () => {
+      revealElements.forEach((element) => revealObserver.unobserve(element));
+    };
+  }, []);
+}
