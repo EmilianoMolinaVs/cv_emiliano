@@ -19,7 +19,7 @@ const Home = () => {
             Ingeniero en Mecatrónica con mención honorífica por el Instituto Politécnico Nacional, especializado en robótica y sistemas inteligentes. Mi trayectoria abarca el ciclo completo de producto: desde el diseño mecánico 3D y análisis estructural, hasta el diseño de hardware, firmware e integración automatizada en lazos de control.
           </p>
           <p className="hero-subtitle">
-            Hoy en día creo ecosistemas conectados en UNIT Electronics. Desarrollando hardware a la medida, firmware de validación para sistemas embebidos, y las interfaces web (frontend) necesarias para la automatización de pruebas en la línea de producción, garantizando la trazabilidad y calidad del producto.
+            Hoy en día creo ecosistemas conectados en UNIT Electronics. Desarrollando hardware a la medida, firmware de validación para sistemas embebidos, y las interfaces web necesarias para la automatización de pruebas en la línea de producción, garantizando la trazabilidad y calidad del producto.
           </p>
         </div>
 
